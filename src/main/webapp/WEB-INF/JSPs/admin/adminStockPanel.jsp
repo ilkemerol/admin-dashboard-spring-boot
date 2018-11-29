@@ -167,6 +167,18 @@
                 	</div>
 	        	</div>
         	</div>
+        	<div class="row wow fadeIn">
+        		<div class="col-md-4 mb-4">
+        			<div class="card mb-4">
+	                    <div class="card-header text-center">
+	                        Alış/Satış Grafiği
+	                    </div>
+	                    <div class="card-body">
+	                        <canvas id="barChart"></canvas>
+	                    </div>
+                	</div>
+        		</div>
+        	</div>
         </div>
         <div id="basicView" class="row wow fadeIn" style="display: none;">
         </div>
@@ -439,6 +451,55 @@
 		    options: {
 		        responsive: true,
 		    }
+		});
+		var totalRate = new Array();
+		var buyingStock = 0;
+		var sellingStock = 0;
+		<c:forEach var="i" begin="0" end="${fn:length(stockData)}">
+			<c:set var="len" value="${fn:length(stockData)}" />
+			<c:if test="${ i < len}">
+				<c:if test="${stockData[i].operation_type == 'B'}">
+					buyingStock = buyingStock + ${stockData[i].price};
+				</c:if>
+				<c:if test="${stockData[i].operation_type == 'C'}">
+					buyingStock = buyingStock + ${stockData[i].price};
+				</c:if>
+				<c:if test="${stockData[i].operation_type == 'S'}">
+					sellingStock = sellingStock + ${stockData[i].selling_price};
+				</c:if>
+			</c:if>
+		</c:forEach>
+		totalRate.push(buyingStock);
+		totalRate.push(sellingStock);
+		//bar
+		var ctxB = document.getElementById("barChart").getContext('2d');
+		var myBarChart = new Chart(ctxB, {
+			type: 'bar',
+			data: {
+				labels: ["Toplam Maliyet", "Toplam Satış"],
+				datasets: [{
+					data: totalRate,
+					backgroundColor: [
+						'rgba(75, 192, 192, 0.2)',
+						'rgba(255, 99, 132, 0.2)',
+					],
+					borderColor: [
+						'rgba(75, 192, 192, 1)',
+						'rgba(255,99,132,1)',
+					],
+					borderWidth: 1
+				}]
+			},
+			options: {
+				legend: false,
+				scales: {
+					yAxes: [{
+						ticks: {
+							beginAtZero: true
+						}
+					}]
+				}
+			}
 		});
 	});
 	$(document).ready(function(){
