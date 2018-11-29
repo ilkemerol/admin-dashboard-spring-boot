@@ -1,0 +1,48 @@
+.fontAwe {
+	font-size: 72px;
+    background: -webkit-linear-gradient(#004990, #2196f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fontAweOnlyColor {
+    background: -webkit-linear-gradient(#004990, #2196f3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fontAweOnlyColorRed {
+	background: -webkit-linear-gradient(#b12a5b, #ff8177);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fontAweOnlyColorEdit {
+	background: -webkit-linear-gradient(#f6d365, #fda085);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.modalHeaderGradient{
+	background-image: linear-gradient(to bottom right, #004990 0%, #2196f3 100%) !important;
+}
+
+.modal-header .closeOv {
+	padding: 1.50rem !important;
+}
+
+.id {
+	vertical-align: middle !important;
+}
+
+.table-green-bg {
+	background-color: #d4edda9e;
+}
+
+.table-yellow-bg {
+	background-color: rgb(255, 243, 205);
+}
+
+.table-red-bg {
+	background-color: #f8d7da82;
+}
