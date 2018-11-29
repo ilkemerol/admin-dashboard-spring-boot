@@ -23,3 +23,4 @@ public interface GenericService {
 	public void updateStock(Integer id, String name, String type, Integer unit_price, Integer count, Integer price, Integer commission, Integer selling_price, String operation_type);
 	
 }
+
