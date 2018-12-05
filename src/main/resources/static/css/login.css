@@ -16,6 +16,7 @@ body {
 	background-size: cover;
 	font-weight: 200;
 	letter-spacing: 2px;
+	font-family: 'Roboto';
 }
 
 body:before {
@@ -109,7 +110,7 @@ body:before {
 
 .feedback {
 	position: absolute;
-	bottom: -70px;
+	bottom: -80px;
 	width: 100%;
 	text-align: center;
 	color: #fff;
@@ -120,6 +121,7 @@ body:before {
 	opacity: 0;
 	border-radius: 4px;
 	min-height: 45px;
+	font-weight: 500;
 }
 
 .feedback:before {
@@ -132,7 +134,7 @@ body:before {
 	position: absolute;
 	pointer-events: none;
 	border-color: rgba(46, 204, 113, 0);
-	border-bottom-color: #2196f3;
+	border-bottom-color: #245d98;
 	border-width: 10px;
 	margin-left: -10px;
 }

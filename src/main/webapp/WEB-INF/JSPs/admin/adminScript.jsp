@@ -7,6 +7,10 @@
 <script>
 $( document ).ready(function() {
 	//$("#close-sidebar").css("display", "none");
-	$(".page-wrapper").addClass("toggled");
+	if ($(document).width() < 1200) {
+		$("#adminSidebar").removeClass("toggled");
+	} else {
+		$(".page-wrapper").addClass("toggled");
+	}
 });
 </script>

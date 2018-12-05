@@ -24,7 +24,7 @@ import com.spring.admintool.model.StockTypeDateModel;
 import com.spring.admintool.service.GenericService;
 
 @Controller
-//@CheckAuthorized
+@CheckAuthorized
 @RequestMapping(value = "/admin")
 public class AdminController {
 	
