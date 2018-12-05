@@ -7,11 +7,11 @@
     <hr class="my-4">
     <div class="pb-4">
         <a href="#" target="_blank">
-            <i class="fab fa-facebook mr-3"></i>
+            <i class="fab fa-facebook mr-3" style="font-size: 20px;"></i>
         </a>
 
         <a href="#" target="_blank">
-            <i class="fab fa-twitter mr-3"></i>
+            <i class="fab fa-twitter mr-3" style="font-size: 20px;"></i>
         </a>
     </div>
     <div class="footer-copyright py-3">
