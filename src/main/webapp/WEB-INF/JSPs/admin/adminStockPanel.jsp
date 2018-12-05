@@ -47,7 +47,7 @@
 	                    	Ürün Toplam Miktarlar
 	                    </div>
 	                    <div class="card-body">
-			       			<table id="stockCountTable" class="table table-bordered table-hover btn-table table-responsive-md">
+			       			<table id="stockCountTable" class="table table-bordered table-hover btn-table">
 			       				<thead class="text-center modalHeaderGradient white-text">
 			   						<tr>
 									<th>Ürün Adı</th>
