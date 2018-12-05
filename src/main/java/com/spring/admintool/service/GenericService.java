@@ -34,3 +34,4 @@ public interface GenericService {
 	
 	public List<ProjectEntity> getAllProject();
 }
+
