@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="/resources/css/admin/adminSidebar.css">
-<div class="page-wrapper chiller-theme">
+<div  id="adminSidebar" class="page-wrapper chiller-theme">
     <a id="show-sidebar" class="btn btn-sm btn-dark">
         <i class="fas fa-bars" style="font-size: 16px;"></i>
     </a>
@@ -17,8 +17,8 @@
                     <img class="img-responsive img-rounded" src="/resources/images/user.png" alt="User picture">
                 </div>
                 <div class="user-info">
-                    <span class="user-name">Name
-                        <strong>Surname</strong>
+                    <span class="user-name">Eren
+                        <strong>AK</strong>
                     </span>
                     <span class="user-role">Administrator</span>
                     <span class="user-status">

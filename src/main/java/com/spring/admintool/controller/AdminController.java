@@ -17,12 +17,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.spring.admintool.annotation.CheckAuthorized;
 import com.spring.admintool.entity.StockEntity;
+import com.spring.admintool.model.CompanyModel;
+import com.spring.admintool.model.ProjectModel;
 import com.spring.admintool.model.StockModel;
 import com.spring.admintool.model.StockTypeDateModel;
 import com.spring.admintool.service.GenericService;
 
 @Controller
-//@CheckAuthorized
+@CheckAuthorized
 @RequestMapping(value = "/admin")
 public class AdminController {
 	
@@ -45,6 +47,8 @@ public class AdminController {
 	
 	@GetMapping("/companyPanel")
 	public String companyPanel(Map<String, Object> model) {
+		model.put("companyProjectData", genericService.getCompanyProject());
+		model.put("projectData", genericService.getAllProject());
 		model.put("pageName", "adminCompanyPanel.jsp");
 		return "admin/adminMain"; 
 	}
@@ -80,6 +84,26 @@ public class AdminController {
 		List<StockEntity> selectedTypeData = genericService.getSelectedStockData(input.getName(), input.getType());
 		response.setStatus(200);
 		return selectedTypeData;
+	}
+	
+	@PostMapping("/saveCompany")
+	public void saveCompany(HttpServletRequest request, HttpServletResponse response, @ModelAttribute CompanyModel input) {
+		genericService.saveNewCompany(input.getName(), input.getTax_no(), input.getType(), "A");
+		response.setStatus(200);
+	}
+	
+	@PostMapping("/saveProject")
+	public void saveProject(HttpServletRequest request, HttpServletResponse response, @ModelAttribute ProjectModel input) {
+		genericService.saveNewProject(input.getC_name(), input.getP_name(), input.getP_no(), input.getP_price(), input.getP_startdate(), input.getP_deliverydate(), input.getP_profit());
+		response.setStatus(200);
+	}
+	
+	@ResponseBody
+	@PostMapping("/getCompanyNames")
+	public List<String> getCompanyNames(HttpServletRequest request, HttpServletResponse response) {
+		List<String> companyNames = genericService.getCompanyNames();
+		response.setStatus(200);
+		return companyNames;
 	}
 	
 	@GetMapping("/dashboard")

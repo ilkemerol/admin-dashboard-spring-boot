@@ -41,13 +41,13 @@
 	                    </div>
                 	</div>
         		</div>
-        		<div class="col-md-8 mb-4">
+        		<div class="col-md-4 mb-4">
 	        		<div class="card mb-4">
 	                    <div class="card-header text-center">
 	                    	Ürün Toplam Miktarlar
 	                    </div>
 	                    <div class="card-body">
-			       			<table id="stockCountTable" class="table table-bordered table-hover btn-table">
+			       			<table id="stockCountTable" class="table table-bordered table-hover btn-table table-responsive-md">
 			       				<thead class="text-center modalHeaderGradient white-text">
 			   						<tr>
 									<th>Ürün Adı</th>
@@ -61,6 +61,16 @@
 		        		</div>
                 	</div>
 	        	</div>
+	        	<div class="col-md-4 mb-4">
+        			<div class="card mb-4">
+	                    <div class="card-header text-center">
+	                        Toplam Alış/Satış Grafiği
+	                    </div>
+	                    <div class="card-body">
+	                        <canvas id="barChart"></canvas>
+	                    </div>
+                	</div>
+        		</div>
         	</div>
 	        <div class="row wow fadeIn">
 	        	<div class="col-md-6 mb-4">
@@ -69,7 +79,7 @@
 	                    	Ürün Girdi/Alış
 	                    </div>
 	                    <div class="card-body">
-			       			<table id="stockBuyingTable" class="table table-bordered table-hover table-responsive-md btn-table">
+			       			<table id="stockBuyingTable" class="table table-bordered table-hover btn-table table-responsive-md">
 			       				<thead class="text-center modalHeaderGradient white-text">
 			   						<tr>
 									<th>Id</th>
@@ -168,16 +178,6 @@
 	        	</div>
         	</div>
         	<div class="row wow fadeIn">
-        		<div class="col-md-4 mb-4">
-        			<div class="card mb-4">
-	                    <div class="card-header text-center">
-	                        Alış/Satış Grafiği
-	                    </div>
-	                    <div class="card-body">
-	                        <canvas id="barChart"></canvas>
-	                    </div>
-                	</div>
-        		</div>
         	</div>
         </div>
         <div id="basicView" class="row wow fadeIn" style="display: none;">
